@@ -50,7 +50,9 @@ del data[-1]
 most_com = Counter(data).most_common(1000)
 with open('freq_words.txt', 'w') as outfile:
     for i in most_com:
-        outfile.write(most_com[i][0]+"\n")
+
+        outfile.write(i[0]+"\n")
+
 
 
 
