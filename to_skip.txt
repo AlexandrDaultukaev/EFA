@@ -249,7 +249,6 @@ eye
 never
 last
 let
-thought
 city
 tree
 cross
@@ -402,8 +401,6 @@ morning
 ten
 simple
 several
-vowel
-toward
 war
 lay
 against
@@ -419,7 +416,6 @@ road
 map
 rain
 rule
-govern
 pull
 cold
 notice
@@ -428,7 +424,6 @@ unit
 power
 town
 fine
-certain
 fly
 fall
 lead
@@ -450,7 +445,6 @@ pound
 done
 beauty
 drive
-stood
 contain
 front
 teach
@@ -556,7 +550,6 @@ syllable
 felt
 perhaps
 pick
-sudden
 count
 square
 reason
