@@ -1,2 +1,2 @@
-# english_from_documentation
-Learn technical English from the most common documentation words!
+# english_from_anywhere
+Learn the most common english words from the source you need!
