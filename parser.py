@@ -3,6 +3,7 @@ import nltk
 from nltk.corpus import stopwords
 from collections import Counter
 from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.corpus import wordnet
 import googletrans
 
 
@@ -33,8 +34,15 @@ class TextProcessor:
         text = " ".join(text)
         # print(f'Final: {text}')
         for word in text.split(" "):
-            self.content.append(self.lemmatizer.lemmatize(word))
-        # self.content.append(self.lemmatizer.lemmatize(text))
+            word_type = self.get_wordnet_pos(word)
+            buff = self.lemmatizer.lemmatize(word, pos=word_type)
+            if buff not in (self.swords, self.skip_words):
+                if word_type == "v" or word_type == "j":
+                    buff = "to " + buff
+                self.content.append(buff.lower())
+                # self.content.append(self.lemmatizer.lemmatize(text))
+        # self.content = list(set(self.content))
+
 
     def process(self):
         print(f'test = {self.content[:10]}')

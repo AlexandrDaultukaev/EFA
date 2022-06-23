@@ -12,9 +12,10 @@ class YouTubeParser:
         self.origin = str()
 
 
-    def parse(self, id: str):
+    def parse(self, ids):
         formatter = TextFormatter()
-        srt = YouTubeTranscriptApi.get_transcript(id)
-        self.origin = formatter.format_transcript(srt)
+        for i in range(len(ids)):
+            srt = YouTubeTranscriptApi.get_transcript(ids[i])
+            self.origin += formatter.format_transcript(srt) + ' '
 
 
