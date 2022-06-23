@@ -17,10 +17,8 @@ class PTranslator:
         with open("freq_ru.txt", 'w') as wfile:
             with open("freq_words.txt") as file:
                 content = file.read()
-                print(content)
                 content_ru = self.translator.translate(content, dest='ru')
-                content_ru = "\n".join(self.set_normal_form(content_ru.text))
-            wfile.write(content_ru)
+            wfile.write(content_ru.text)
 
 
 
